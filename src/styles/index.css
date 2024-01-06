@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+}
+h1 {
+    font-size: clamp(3.2rem, calc(3.2rem + ((1vw - 0.48rem) * 0.2778)), 3.4rem);
+    line-height: 1.2;
+    font-weight: 600;
+}
+h2 {
+    font-size: clamp(
+            2.5rem,
+            calc(2.5rem + ((1vw - 0.48rem) * 0.3472)),
+            2.75rem
+    );
+    line-height: 1.2;
+    font-weight: 600;
+}
+h3 {
+    font-size: clamp(
+            1.875rem,
+            calc(1.875rem + ((1vw - 0.32rem) * 0.1302)),
+            2rem
+    );
+    line-height: 1.2;
+    font-weight: 600;
+}
+h4 {
+    font-size: clamp(
+            1.5rem,
+            calc(1.5rem + ((1vw - 0.32rem) * 0.2604)),
+            1.75rem
+    );
+    line-height: 1.2;
+    font-weight: 600;
+}
+h5 {
+    font-size: clamp(
+            1.25rem,
+            calc(1.25rem + ((1vw - 0.32rem) * 0.1562)),
+            1.4rem
+    );
+    line-height: 1.2;
+    font-weight: 500;
+}
+h6 {
+    font-size: clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.1302)), 1.125rem);
+    line-height: 1.2;
+    font-weight: 500;
+}
