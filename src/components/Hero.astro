@@ -7,18 +7,18 @@ import brayan from '../assets/esta.png'
     <div class="grid lg:grid-cols-2 2xl:grid-cols-5">
         <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:py-40 lg:px-12 lg:max-w-full xl:py-64 xl:mr-0 2xl:col-span-2 2xl:py-96">
             <div class="xl:max-w-xl">
-                <img  class="sm:h-64 h-[350px] object-cover border sm:w-full sm:object-cover object-center lg:hidden" src={brayan.src}>
-                <h1 class="mt-6 text-2xl font-bold text-gray-200 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">Hey, <span class="text-yellow-300">👋</span> I'm Brayan.
+                <img  class="sm:h-64 h-[350px] object-cover  sm:w-full sm:object-cover object-center lg:hidden" src={brayan.src}>
+                <h1 class="mt-6 animated__txt text-2xl font-bold text-gray-200 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">Hey, <span class="text-yellow-300">👋</span> I'm Brayan,
                     <br class="hidden lg:inline-block">
-                    <span class="text-indigo-500">front-end developer.</span></h1>
+                    <span class="text-indigo-500 animation-txt">front-end developer.</span></h1>
                 <div class="mt-4 sm:mt-6 lg:mt-8">
-                    <a class="inline-block px-5 py-3 rounded-[35px] shadow-lg  bg-indigo-600 hover:bg-indigo-700 transition-all text-white uppercase tracking-wider font-semibold text-sm sm:text-base 2xl:py-3 2xl:px-6 2xl:text-md" href="#">download cv</a>
+                    <a class="inline-block px-5 py-3 rounded-[35px] shadow-lg animated__btn  bg-indigo-600 hover:bg-indigo-700 transition-all text-white uppercase tracking-wider font-semibold text-sm sm:text-base 2xl:py-3 2xl:px-6 2xl:text-md" href="#">download cv</a>
                 </div>
             </div>
 
         </div>
         <div class="hidden lg:block relative 2xl:col-span-3">
-            <img class="absolute w-full  h-full inset-0 object-center object-cover"  src={brayan.src}>
+            <img class="absolute w-full  h-full inset-0 object-center object-cover"  src={brayan.src} alt="me-neon">
         </div>
     </div>
 
@@ -34,9 +34,9 @@ import brayan from '../assets/esta.png'
         white-space: nowrap;
     }
 
-    .animated__image {
+    .animated__txt {
         transition: all 0.2s;
-        animation: moveInleft 0.5s ease-out 0.75s;
+        animation: moveInRight 0.5s ease-out 0.75s;
     }
 
     .animated__btn {
@@ -45,37 +45,9 @@ import brayan from '../assets/esta.png'
 
     }
 
-    @keyframes blink {
-        50% {
-            border-color: transparent;
-        }
-    }
+  
 
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-        to {
-            width: 100%;
-        }
-    }
-
-    @keyframes moveInleft {
-        0% {
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-        80% {
-            transform: translateX(1rem);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translate(0);
-
-
-        }
-    }
+   
 
     @keyframes moveInRight {
         0% {
@@ -106,4 +78,25 @@ import brayan from '../assets/esta.png'
 
         }
     }
+
+    .animation-txt{
+        position: relative;
+       
+        overflow: hidden;
+        background: linear-gradient(90deg, #000, #6366f1, #000);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        animation: animate 3s linear infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    }
+
+    @keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
 </style>

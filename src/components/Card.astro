@@ -8,15 +8,17 @@ const { data } = Astro.props;
 
 ---
 
+
+
 <div>
-  <div class="relative mx-auto flex w-full max-w-md  flex-col rounded-xl  bg-white bg-clip-border text-gray-700 shadow-2xl border">
+  <div class="card relative mx-auto flex w-full max-w-md  flex-col rounded-xl  bg-white bg-clip-border text-gray-700 shadow-2xl border">
     <div
       class="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
       <img
-      class="h-[250px] object-cover object-center"
+      class="h-[250px] object-cover object-center "
         src={data.img}
-        alt="ui/ux review check" />
-        <div class="overlay"></div>  
+        alt={data.title} />
+        <div class="overlay "></div>  
     </div>
     <div class="p-6">
       <div class="flex items-center justify-between mb-3">
@@ -71,6 +73,28 @@ const { data } = Astro.props;
   </div> 
 </div>
 
+<script>
+  // Función para manejar el evento de scroll
+  const handleScroll = () => {
+    const elements = document.querySelectorAll('.card');
+
+    elements.forEach((element, index) => {
+      const top = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (top < windowHeight) {
+        setTimeout(() => {
+          element.classList.add('show');
+        }, index * 300);
+      }
+    });
+  };
+
+  // Registra el evento de scroll y muestra elementos al cargar la página
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Muestra elementos ya visibles al cargar la página
+</script>
+
 <style>
   .overlay{
     position: absolute;
@@ -81,4 +105,14 @@ const { data } = Astro.props;
     background-color: rgba(0, 0, 0, 0.4);
     
   }
+  .card {
+      opacity: 0;
+      transform: translateY(90px);
+      transition: opacity 0.5s, transform 0.9s;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 </style>
