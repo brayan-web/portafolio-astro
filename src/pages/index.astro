@@ -1,171 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// import Header from '../components/Header.astro'
-import brayan from '../assets/brayan-complete.png'
-
+import Hero from '../components/Hero.astro';
+import AboutMe from '../components/AboutMe.astro';
+import WorkExperience from '../components/WorkExperience.astro';
+import Skills from '../components/Skills.astro'
 ---
-<Layout title="Welcome to Astro.">
-	<div class="">
-
-
-		<section class="pt-12 bg-violet-400 border-2 border-amber-800 h-screen">
-			<div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl border">
-				<div class="grid max-w-md grid-cols-1 mx-auto border lg:grid-cols-12 gap-x-6 gap-y-8 lg:max-w-none">
-					<div class="self-center lg:col-span-4 border">
-						<h1 class="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl">Hey 👋 I am Brian Jones, writing on NFTs.</h1>
-						<p class="mt-5 text-base font-normal leading-7 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula massa in enim luctus.</p>
-						<div class="relative inline-flex mt-9 group">
-							<div class="absolute transitiona-all duration-1000 opacity-70 inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
-
-							<a
-								href="#"
-								title=""
-								class="relative inline-flex items-center justify-center px-8 py-3 sm:text-sm sm:py-3.5 text-base font-semibold text-white transition-all duration-200 bg-indigo-600 border border-transparent rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
-								role="button"
-							>
-								Read Exclusive Blog
-							</a>
-						</div>
-					</div>
-
-
-
-					<div class="lg:col-span-8 self-center border relative h-full">
-						<img class="w-full mx-auto animated__image absolute object-cover object-center w-full h-full" src={brayan.src} alt="" />
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
-
-	<!--<section class="-->
-    <!-- bg-[#081B29]-->
-
-	<!--	md:h-screen-->
-
-	<!-- ">-->
-	<!--	<div class="grid md:grid-cols-5 lg:grid-cols-2 ">-->
-	<!--		<div class="px-5 py-5 md:col-span-2 md:flex items-center h-full  lg:col-span-1  max-w-md mx-auto sm:max-w-xl md:max-w-xl  lg:max-w-full">-->
-	<!--		<div>-->
-	<!--			<h1 class="text-center md:text-left font-extrabold  text-white text-2xl sm:text-3xl lg:text-5xl mt-10 text-left lg:py-5">-->
-	<!--				<span class="block">Hey, 👋 I'm Brayan,</span>-->
-	<!--				<span class="tipyng whitespace-nowrap">FRONT-END-->
-
-	<!--					DEVELOPER</span>-->
-	<!--			</h1>-->
-	<!--			<div class=" mt-10 text-center md:text-left lg:py-5">-->
-	<!--				<a href="#" class="text-1xl lg:text-1xl animated__btn  inline-block px-5 py-3 rounded-lg shadow-lg bg-[#42D684] text-white uppercase tracking-wider font-semibold">-->
-	<!--					download cv-->
-	<!--				</a>-->
-	<!--			</div>-->
-	<!--		</div>-->
-	<!--		</div>-->
-	<!--		<div class="hidden relative border h-full   md:block md:col-span-3 lg:col-span-1 ">-->
-	<!--			<img src={brayan.src} class="cartoon__image border w-full h-full object-center object-cover animated__image" alt="cartoon" >-->
-	<!--		</div>-->
-	<!--	</div>-->
-
-	<!--</section>-->
+<Layout title="Brayan Sandoval">
+    <Hero/>
+    <AboutMe/>
+    <WorkExperience/>
+    <Skills/>
 </Layout>
 
-
 <style>
-	.bg-section{
-		background-image: url("../assets/bg.png");
-		background-repeat: no-repeat;
-		height: 100vh;
-		
-		background-size: cover;
-		background-position: center;
-	}
-	.content{
-		
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		height: 100vh;
-	}
-
-	.tipyng{
-		color: #42D684;
-		border-right: .13em solid #42D684;
-		animation: typing 4s steps(38) 2s 1 normal both , blink 1s steps(1) infinite;
-		width: 0;
-		overflow: hidden;
-		white-space: nowrap;
-	}
-	.animated__image{
-		transition: all 0.2s;
-
-		animation: moveInleft 0.5s ease-out 0.75s;
-	}
-	.animated__btn{
-		animation: moveInBottom 0.5s ease-out 0.75s;
-		transition: all 0.2s;
-
-	}
-	.cartoon__image{
-		position: absolute;
-
-	}
-	@keyframes blink {
-		50% {
-			border-color: transparent;
-		}
-	}
-	@keyframes typing {
-		from {
-			width: 0;
-		}
-		to {
-			width: 100%;
-		}
-	}
-	@keyframes moveInleft {
-		0%{
-			opacity: 0;
-			transform: translateX(-100%);
-		}
-		80%{
-			transform: translateX(1rem);
-		}
-
-		100%{
-			opacity: 1;
-			transform: translate(0);
 
 
-		}
-	}
 
-	@keyframes moveInRight {
-		0%{
-			opacity: 0;
-			transform: translateX(100%);
-		}
-		80%{
-			transform: translateX(-1rem);
-		}
-
-		100%{
-			opacity: 1;
-			transform: translate(0);
-
-
-		}
-	}
-	@keyframes moveInBottom {
-		0%{
-			opacity: 0;
-			transform: translateY(3rem);
-		}
-
-		100%{
-			opacity: 1;
-			transform: translate(0);
-
-		}
-	}
 </style>
+
+
+
 
 

@@ -1,0 +1,38 @@
+[
+    {
+        "img": "https://portafolio-web-sandoval.netlify.app/img/web-kiritek.ed8777d1.png",
+        "title": "kiritek",
+        "description": "Kiritek company official site",
+        "site": "https://kiritek.com/"
+    },
+    {
+        "img": "https://portafolio-web-sandoval.netlify.app/img/masterplan-3m.2b19722c.png",
+        "title": "master plan tres marias",
+        "description": "Masterplan of the city Tres Marias",
+        "site": "https://www.tresmarias.com.mx/masterplan/"
+    },
+    {
+        "img": "https://portafolio-web-sandoval.netlify.app/img/web-skolable.d04039f7.png",
+        "title": "skolable web",
+        "description": "Official website of the Skolable application",
+        "site": "https://skolable.com/"
+    },
+    {
+        "img": "https://portafolio-web-sandoval.netlify.app/img/admin-skolable.8191f7b5.png",
+        "title": "Skolable Administrator",
+        "description": "Skolable application administrator",
+        "site": "https://admin.skolable.com/#/es/login"
+    },
+    {
+        "img": "https://portafolio-web-sandoval.netlify.app/img/web-3m.55ad24da.png",
+        "title": "tres marias",
+        "description": "Official website of Ciudad Tres Marías",
+        "site": "https://www.tresmarias.com.mx/"
+    },
+    {
+        "img": "https://portafolio-web-sandoval.netlify.app/img/card-3m.d109aa31.png",
+        "title": "business cards",
+        "description": "business cards of the tres marias company",
+        "site": "https://vcard.tresmarias.com.mx/c28776c9-02ad-4674-b30b-86711d966814"
+    }
+]
