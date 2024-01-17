@@ -1,0 +1,44 @@
+nav ul li a{
+    font-weight: 700;
+    transition: all ;
+    text-decoration: none;
+  }
+  nav ul li a:hover{
+    border-bottom: 1px solid #6366f1;
+  }
+
+  nav .logo{
+    position: absolute;
+    left: 90px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .open-menu {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(-50%, -50%);
+  }
+
+  .sidebar{
+    position: fixed;
+    z-index: 999;
+    background: white;
+    width: 250px;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    transition: all .5s ease;
+  
+  }
+
+  nav .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  .nav-active{
+    transform:translateX(0) !important;
+   }
