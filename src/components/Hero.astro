@@ -1,39 +1,53 @@
 ---
-import brayan from '../assets/esta.png'
+import brayan from '../assets/blue.png'
 
 ---
 
-<section class="bg-black">
+<section class="
+bg-gradient-to-r from-red-600 to-blue-600
+">
     <div class="grid lg:grid-cols-2 2xl:grid-cols-5">
         <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:py-40 lg:px-12 lg:max-w-full xl:py-64 xl:mr-0 2xl:col-span-2 2xl:py-96">
             <div class="xl:max-w-xl">
-                <img  class="sm:h-64 h-[350px] object-cover  sm:w-full sm:object-cover object-center lg:hidden" src={brayan.src} alt="me-neon-desktop">
+                <img  class="mx-auto sm:mt-20 md:mt-20 md:h-[450px] sm:h-[450px] h-[350px] object-cover  sm:w-full sm:object-cover object-center lg:hidden" src={brayan.src} alt="me-neon-desktop">
                 <h1 class="mt-6 text-center lg:text-left animated__txt text-2xl font-bold text-gray-200 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">Hey, <span class="text-yellow-300">👋</span> I'm Brayan,
                     <br class="hidden lg:inline-block">
-                    <span class="text-indigo-500 animation-txt">front-end developer.</span></h1>
+                    <span class="text-red-500 animation-txt">front-end developer.</span></h1>
                 <div class="mt-10 sm:mt-6 lg:mt-8 text-center lg:text-left">
-                    <a class="inline-block px-4 py-2 rounded-[35px] shadow-lg animated__btn  bg-indigo-600 hover:bg-indigo-700 transition-all text-white uppercase tracking-wider font-semibold text-[12px] sm:text-base 2xl:py-3 2xl:px-6 2xl:text-md" href="#">download cv</a>
+                    <button id="downloadPDF" class="inline-block px-4 py-2 rounded-[35px] shadow-lg animated__btn  bg-blue-600 hover:bg-blue-700 transition-all text-white uppercase tracking-wider font-semibold text-[12px] sm:text-base 2xl:py-3 2xl:px-6 2xl:text-md" href="#">download cv</button>
                 </div>
             </div>
         </div>
         <div class="hidden lg:block relative 2xl:col-span-3">
-            <img class="absolute w-full  h-full inset-0 object-center object-cover"  src={brayan.src} alt="me-neon">
+            <img class="w-[70%]  absolute h-full inset-0 object-center object-cover"  src={brayan.src} alt="me-neon">
         </div>
     </div>
 
 </section>
 
+<script>
+const btnDownloadPDF = document.querySelectorAll("#downloadPDF");
+const downloadPDF = () => {
+    let urlPDF = 'https://drive.google.com/file/d/1bULtuNtPdlDRH4alyV1v5awAK8pyeriA/view?usp=sharing';
+    let link =  document.createElement('a');
+    link.href = urlPDF;
+    link.target = '_blank'
+    link.download = 'CV-BRAYAN.pdf';
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+
+}
+btnDownloadPDF.forEach((item) => {
+    item.addEventListener("click", downloadPDF)
+})
+
+</script>
+
 
 <style>
-    .tipyng {
-
-        animation: typing 2s steps(38) 2s 1 normal both, blink 1s steps(1) infinite;
-        width: 0;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-
-    .animated__txt {
+   .animated__txt {
         transition: all 0.2s;
         animation: moveInRight 0.5s ease-out 0.75s;
     }
@@ -82,7 +96,7 @@ import brayan from '../assets/esta.png'
         position: relative;
        
         overflow: hidden;
-        background: linear-gradient(90deg, #000, #6366f1, #000);
+        background: linear-gradient(90deg, #fff, #2563eb, #fff);
         background-repeat: no-repeat;
         background-size: 80%;
         animation: animate 3s linear infinite;

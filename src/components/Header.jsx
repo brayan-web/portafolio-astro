@@ -8,6 +8,7 @@ const Header = () => {
         setIsOpen(!isOpen);
       };
       const scrollToSection = (sectionId) => {
+     
         const section = document.getElementById(sectionId);
     
         if (section) {
@@ -17,9 +18,9 @@ const Header = () => {
       };
   return (
     <>
-      <header>
-    <nav className="bg-black flex sm:justify-end xl:justify-center items-center py-10 relative">
-        <div className="logo text-indigo-500 font-semibold text-4xl">
+      <header className='fixed w-full z-[99]' id='home'>
+    <nav className="bg-gradient-to-r from-red-600 to-blue-600 flex sm:justify-end xl:justify-center items-center py-7 relative">
+        <div className="logo text-gray-100 font-semibold text-4xl cursor-pointer" onClick={() => scrollToSection('home')}>
             {'<B/>'}
         </div>
         <div className="open-menu md:hidden cursor-pointer" onClick={toggleNavbar}>
@@ -46,7 +47,7 @@ const Header = () => {
 
         {isOpen && (
             
-<header className='sidebar'>
+<header className='sidebar fixed'>
     <nav className="relative py-20">
         <div className="close-menu" onClick={toggleNavbar}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
