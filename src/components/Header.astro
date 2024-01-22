@@ -1,0 +1,39 @@
+
+---
+const navItems = [
+
+{
+  title: 'Experiencia',
+  url: '/#experiencia'
+},
+{
+  title: 'Proyectos',
+  url: '/#proyectos'
+},
+{
+  title: 'Sobre mí',
+  url: '/#sobre-mi'
+},
+{
+  title: 'Contacto',
+  url: '/#contacto'
+},
+
+]
+---
+
+
+<header class='sticky flex justify-center items-center mx-auto w-full lg:w-[1120px] z-10 top-0 py-5' id='home' >
+  <nav class="flex flex-row items-center bg-neutral-200 dark:bg-black/50 px-5 py-1 rounded-xl">
+      <div class=" text-gray-900 font-semibold text-3xl cursor-pointer">
+          {'<B/>'}
+      </div>
+
+      {
+        navItems.map((link) => (
+          <a class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base" href={link.url}>{link.title}</a>
+        ))
+      }
+      
+  </nav>
+</header>
