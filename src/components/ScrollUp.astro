@@ -1,0 +1,44 @@
+---
+
+---
+
+
+<div class="bg-green-500 w-14 h-14 rounded-[50%] flex justify-center items-center z-50 btn-up" id="scroll-button">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+      </svg> 
+</div>
+
+<script>
+
+    const scrollButton = document.querySelectorAll("#scroll-button");
+    const handleScroll = () => {
+        scrollButton.forEach((btn) => {
+            btn.classList.toggle('hidden', window.scrollY <= 100);
+            
+        })
+    }
+  
+
+    scrollButton.forEach((button) => {
+    button.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+    });
+  });
+
+
+    window.addEventListener('scroll', handleScroll);
+</script>
+
+<style>
+
+    .btn-up{
+        position: fixed;
+        
+        bottom: 50px;
+        right: 20px;
+        cursor: pointer;
+        transition: all .2s ease;
+    }
+</style>

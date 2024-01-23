@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ScrollUp from "../components/ScrollUp.astro";
 
 
 interface Props {
@@ -26,9 +27,11 @@ import "aos/dist/aos.css";
 		<title>{title}</title>
 	</head>
 	<body class="relative bg-neutral-950 h-full w-full text-black dark:text-white">  
-	  <div class="top-0 z-[-2] fixed h-screen w-screen bg-neutral-950 dark:bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>	
+	  <div class="fixed top-0 inset-0 z-[-2] h-screen w-screen items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+	  <!-- <div class="top-0 z-[-2] fixed h-screen w-screen bg-neutral-950 dark:bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>	 -->
 	  	<Header/>
-		<slot />
+		<slot/>
+		<ScrollUp/>
 		<Footer/>
 		<script>
 			import { aosInit } from "../services/aos";

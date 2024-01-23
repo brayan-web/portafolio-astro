@@ -3,23 +3,23 @@ import brayan from '../assets/me.webp'
 
 ---
 
-<section class="
-
-">
+<section>
     <div class="grid lg:grid-cols-2 2xl:grid-cols-5">
         <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:py-40 lg:px-12 lg:max-w-full xl:py-64 xl:mr-0 2xl:col-span-2 2xl:py-96">
-            <div class="xl:max-w-xl">
-                <img data-aos="fade-up"  class="mx-auto sm:mt-20 md:mt-20 md:h-[450px] sm:h-[450px] h-[350px] object-cover  sm:w-full sm:object-cover object-center lg:hidden" src={brayan.src} alt="me-neon-desktop">
-                <h1 class="mt-6 text-center lg:text-left animated__txt text-2xl font-bold text-gray-200 dark:text-gray-100 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">Hey, <span class="text-yellow-300">👋</span> I'm Brayan,
+            <div class="xl:max-w-xl w-full">
+                <img class="mx-auto sm:mt-20 md:mt-20 md:h-[450px] sm:h-[450px] h-[350px] object-cover  sm:w-full sm:object-cover object-center lg:hidden" src={brayan.src} alt="me-neon-desktop">
+                <h1 class=" mt-6 text-center lg:text-left text-2xl font-bold text-gray-200 dark:text-gray-100 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+                   <span class=""> Hey, <span class="text-yellow-300">👋</span>  I'm Brayan,</span>
                     <br class="hidden lg:inline-block">
-                    <span class=" text-blue-600">front-end developer.</span></h1>
+                    <span class=" text-green-500">front-end developer.</span>
+                </h1>
                 <div class="mt-10 sm:mt-6 lg:mt-8 text-center lg:text-left">
-                    <button id="downloadPDF" class="block px-4 py-2 rounded-[35px] shadow-lg animated__btn transition-all  bg-blue-600 hover:bg-blue-700 transition-all text-white uppercase tracking-wider font-semibold text-[12px] sm:text-base 2xl:py-3 2xl:px-6 2xl:text-md" href="#">download cv</button>
+                    <button id="downloadPDF" class="px-4 py-3 rounded-[35px] shadow-lg animated__btn  bg-green-500 hover:bg-green-600 transition-all text-white uppercase tracking-wider font-semibold text-[12px] sm:text-base 2xl:py-2 2xl:px-6 2xl:text-md">download cv</button>
                 </div>
             </div>
         </div>
         <div class="hidden lg:block relative 2xl:col-span-3">
-            <img data-aos="fade-up" class="w-full  absolute h-full inset-0 object-center object-cover"  src={brayan.src} alt="me-neon">
+            <img  class="w-full  absolute h-full inset-0 object-center object-cover"  src={brayan.src} alt="me-neon">
         </div>
     </div>
 
@@ -47,62 +47,52 @@ btnDownloadPDF.forEach((item) => {
 
 
 <style>
-   .animated__txt {
-        transition: all 0.2s;
-        animation: moveInRight 0.5s ease-out 0.75s;
+    .animated__btn{
+        transition: all .2s;
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+ @keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
     }
 
-    .animated__btn {
-        animation: moveInBottom 0.5s ease-out 0.75s;
-        transition: all 0.2s;
-
-    }
-    @keyframes moveInRight {
-        0% {
-            opacity: 0;
-            transform: translateX(100%);
-        }
-        80% {
-            transform: translateX(-1rem);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translate(0);
-        }
+    80% {
+        transform: translateX(1px);
     }
 
-    @keyframes moveInBottom {
-        0% {
-            opacity: 0;
-            transform: translateY(10rem);
-        }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
 
-        100% {
-            opacity: 1;
-            transform: translate(0);
-
-        }
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
     }
 
-    .animation-txt{
-        position: relative;
-       
-        overflow: hidden;
-        background: linear-gradient(90deg, #fff, #2563eb, #fff);
-        background-repeat: no-repeat;
-        background-size: 80%;
-        animation: animate 3s linear infinite;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    80% {
+        transform: translateX(-1px);
     }
 
-    @keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
-  }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 </style>
