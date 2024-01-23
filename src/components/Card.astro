@@ -11,7 +11,7 @@ const { data } = Astro.props;
 
 
 <div>
-  <div class="card relative mx-auto flex w-full max-w-md  flex-col rounded-xl  bg-white dark:bg-indigo-950 bg-clip-border text-gray-700 shadow-2xl border">
+  <div data-aos="fade-up" class="card relative mx-auto flex w-full max-w-md  flex-col rounded-xl  bg-neutral-950 dark:bg-black/50  text-gray-700 shadow-2xl">
     <div
       class="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
       <img
@@ -22,12 +22,12 @@ const { data } = Astro.props;
     </div>
     <div class="p-6">
       <div class="flex items-center justify-between mb-3">
-        <h5 class="block uppercase font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900 dark:text-gray-200">
+        <h5 class="block uppercase font-sans text-xl antialiased font-medium leading-snug tracking-normal text-gray-200 dark:text-gray-200">
           {data.title}
         </h5>
        
       </div>
-      <p class="block font-sans text-base antialiased font-light leading-relaxed text-gray-700 dark:text-white">
+      <p class="block font-sans text-base antialiased font-light leading-relaxed text-gray-300 dark:text-white">
         {data.description}
       </p>
       <div class="flex justify-center flex-wrap items-center gap-3 mt-8 group">
@@ -74,25 +74,25 @@ const { data } = Astro.props;
 </div>
 
 <script>
-  // Función para manejar el evento de scroll
-  const handleScroll = () => {
-    const elements = document.querySelectorAll('.card');
 
-    elements.forEach((element, index) => {
-      const top = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
+  // const handleScroll = () => {
+  //   const elements = document.querySelectorAll('.card');
 
-      if (top < windowHeight) {
-        setTimeout(() => {
-          element.classList.add('show');
-        }, index * 300);
-      }
-    });
-  };
+  //   elements.forEach((element, index) => {
+  //     const top = element.getBoundingClientRect().top;
+  //     const windowHeight = window.innerHeight;
 
-  // Registra el evento de scroll y muestra elementos al cargar la página
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Muestra elementos ya visibles al cargar la página
+  //     if (top < windowHeight) {
+  //       setTimeout(() => {
+  //         element.classList.add('show');
+  //       }, index * 300);
+  //     }
+  //   });
+  // };
+
+ 
+  // window.addEventListener('scroll', handleScroll);
+  // handleScroll(); 
 </script>
 
 <style>
@@ -106,7 +106,7 @@ const { data } = Astro.props;
     
   }
   .card {
-      opacity: 0;
+    
       transform: translateY(90px);
       transition: opacity 0.3s, transform 0.8s;
     }

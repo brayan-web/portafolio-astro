@@ -9,6 +9,7 @@ interface Props {
 
 const { title } = Astro.props;
 import "../styles/index.css";
+import "aos/dist/aos.css";
 ---
 
 <!doctype html>
@@ -24,16 +25,15 @@ import "../styles/index.css";
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
-	<body class="relative text-black dark:text-white">
-		<div
-		class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-blue-100 dark:bg-neutral-950
-		bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-		dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-	  >
-	  </div>
+	<body class="relative bg-neutral-950 h-full w-full text-black dark:text-white">  
+	  <div class="top-0 z-[-2] fixed h-screen w-screen bg-neutral-950 dark:bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>	
 	  	<Header/>
 		<slot />
 		<Footer/>
+		<script>
+			import { aosInit } from "../services/aos";
+			aosInit();
+		</script>
 	</body>
 </html>
 
