@@ -1,61 +1,94 @@
 ---
-import js from "../assets/js.png";
+
 import { imprimeArray } from "../services/main"
 const cardContent = [
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509594/logos/phgvshq4yjmwygoqb57o.webp',
     title: 'css 3',
     description: 'cascading styles sheets',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509594/logos/b0dzfp31wjpth5s84xec.webp',
     title: 'git',
     description: 'control de versiones',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509594/logos/b6drsnclncg3obbai794.webp',
     title: 'github',
-    description: 'alojamiento de proyectos'
+    description: 'alojamiento de proyectos',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509594/logos/uyvzk0vs4mvchsvzvam3.webp',
     title: 'html',
-    description: 'hyper text markup lenguage'
+    description: 'hyper text markup lenguage',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509594/logos/xpno7mgafmraoz86odmb.webp',
     title: 'javascript',
-    description: 'lenguaje de programacion'
+    description: 'lenguaje de programacion',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509595/logos/walknbtmvcc0ju2yu9zm.webp',
     title: 'sass',
-    description: 'lenguaje de css'
+    description: 'lenguaje de css',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509595/logos/m6glxdmmkbczhmd8crih.webp',
     title: 'vue',
-    description: 'framewor de js para el diseño de interfaces'
+    description: 'framewor de js para el diseño de interfaces',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1706123577/logos/ghjtxad3p3vuunvjyeu4.png',
     title: 'amazon web services',
-    description: 'servicio de computacion en la nube'
+    description: 'servicio de computacion en la nube',
+    width: '134',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509594/logos/yhnrqfgnxwfpw4uxsea7.webp',
     title: 'bootstrap',
-    description: 'biblioteca para el diseño de paginas'
+    description: 'biblioteca para el diseño de paginas',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509595/logos/l5gpw5xzy1f1dbsbp6qs.webp',
     title: 'tailwind',
-    description: 'framework de css para diseño de paginas'
+    description: 'framework de css para diseño de paginas',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509594/logos/k3qqkpmiczmphvgukspm.webp',
     title: 'react',
-    description: 'libreria de javascript ops'
+    description: 'libreria de javascript ops',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509594/logos/wgrnwseakperpnpn63ps.webp',
@@ -65,17 +98,26 @@ const cardContent = [
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509594/logos/yxpxy5hm3t8vfdwdxwmf.webp',
     title: 'npm',
-    description: 'node package modules'
+    description: 'node package modules',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509594/logos/es1ox4uluzolfzhtofd9.webp',
     title: 'jira',
-    description: 'jira gestion de proyectos'
+    description: 'jira gestion de proyectos',
+    width: '150',
+    height: '70'
+
   },
   {
     img: 'https://res.cloudinary.com/djvitvb1v/image/upload/v1705509595/logos/od5fawnr5uuch20tz4ad.webp',
     title: 'astro',
-    description: 'framework astro build'
+    description: 'framework astro build',
+    width: '150',
+    height: '70'
+
   },
 ]
 
@@ -103,7 +145,7 @@ const [ mitad1, mitad2 ] = imprimeArray(cardContent);
       {
         mitad1.map((item) => (
         <li class="bg-white/80  py-3 px-3 rounded-md shadow-md text-center">
-            <img  src={item.img} width="134" height="70" alt={item.description}/>
+            <img  src={item.img} width={item.with} height={item.height} alt={item.description}/>
             <span class="font-bold text-black dark:text-white block mt-3 uppercase">{item.title}</span>
           </li>
         ))
@@ -116,7 +158,7 @@ const [ mitad1, mitad2 ] = imprimeArray(cardContent);
       {
         mitad2.map((item) => (
         <li class="bg-white/80 dark:bg-black py-3 px-3 rounded-md shadow-md text-center">
-            <img  src={item.img} width="150" height="150" alt={item.description}/>
+            <img  src={item.img} width={item.width} height={item.height} alt={item.description}/>
             <span class="font-bold text-black dark:text-white block mt-3 uppercase">{item.title}</span>
           </li>
         ))
