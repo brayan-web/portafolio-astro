@@ -10,4 +10,4 @@ const imprimeArray = (array) => {
         return [ primerMitad, segundaMitad ]
 }
 
-export { imprimeArray}
+export { imprimeArray }
