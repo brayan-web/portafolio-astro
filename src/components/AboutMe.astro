@@ -1,5 +1,5 @@
 ---
-import brayan from '../assets/brayan-complete.webp'
+import brayan from '../assets/aboutme.webp'
 
 ---
 
@@ -12,14 +12,33 @@ import brayan from '../assets/brayan-complete.webp'
                         Sobre mí
                 </span>
                     </h2>
-                    <p class="mt-2 text-lg  dark:text-white sm:mt-6 text-pretty">I am a web developer, with more than 2 years of experience; highly motivated and with the ability to create high-performing web applications and attractive websites. Passionate about programming and problem solving. I am looking for an opportunity to apply my technical and creative skills in a dynamic environment.
+                    <p class="mt-2 text-lg  dark:text-white sm:mt-6 text-pretty">
+                        Soy un desarrollador web, con mas de 2 años de experiencia; altamente motivado y con la
+                        capacidad de crear aplicaciones web de alto rendimiento y sitios web atractivos.
+                        Apasionado por la programación y la resolución de problemas. Busco una oportunidad para
+                        aplicar mis habilidades técnicas y creativas en un entorno dinámico.
+                        
                     </p>
                 </div>
 
-                <div class="xl:col-span-1 hidden lg:block">
-                        <img loading="lazy" class="h-[300px] sm:h-[500px] lg:h-[550px] w-full object-cover object-center" src={brayan.src} alt="me">
-                </div>
+                <div class="xl:col-span-1 hidden lg:block relative">
+                        <img loading="lazy" class="h-[300px] sm:h-[500px] lg:h-[550px] w-full object-cover object-center rounded-[35px]" src="https://res.cloudinary.com/djvitvb1v/image/upload/v1706656820/iuaggwukworg5elkmi50.webp" alt="me">
+                        <div class="overlay "></div>  
+                    </div>
             </div>
         </div>
     </section>
 </div>
+
+<style>
+     .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 35px;
+    
+  }
+</style>
