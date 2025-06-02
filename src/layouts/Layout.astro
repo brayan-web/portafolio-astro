@@ -25,10 +25,26 @@ import "aos/dist/aos.css";
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<title>{title}</title>
 	</head>
-	<body class="relative bg-white h-full w-full text-black dark:text-white"> 
-		<div class="fixed top-0 z-[-2] h-screen w-screen rotate-180 transform dark:bg-neutral-950 bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"></div> 
+	<body class="relative  bg-gray-950 h-full w-full text-black dark:text-white"> 
 	  	<Header/>
-		<slot/>
+		<!-- Contenedor principal con grid -->
+		<div class="relative grid grid-cols-1 md:grid-cols-12">
+			<!-- Borde izquierdo (visible solo en md+) -->
+			<div class="col-start-1 row-span-full row-start-1 hidden border-r border-r-gray-800 bg-[image:repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed opacity-5 md:block dark:opacity-10"></div>
+			
+			<!-- Contenido principal -->
+			<div class="col-span-full md:col-start-2 md:col-end-12">
+				<div class="max-w-7xl mx-auto px-4 md:px-8">
+					<slot/>
+				</div>
+			</div>
+			
+			<!-- Borde derecho (visible solo en md+) -->
+			<div class="col-start-12 row-span-full row-start-1 hidden border-l border-l-gray-800 bg-[image:repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed opacity-5 md:block dark:opacity-10"></div>
+		</div>
+		<!-- <div class="max-w-7xl mx-auto px-4 md:px-8">
+			<slot/>
+		</div> -->
 		<ScrollUp/>
 		<Footer/>
 		<script>
@@ -37,6 +53,7 @@ import "aos/dist/aos.css";
 		</script>
 	</body>
 </html>
+
 
 <style>
 	  :root {

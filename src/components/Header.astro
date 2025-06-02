@@ -23,10 +23,8 @@ const navItems = [
 ---
 
 
-<header class='sticky flex justify-center items-center mx-auto w-full lg:w-[1220px] z-10 top-0 py-5' id='home' >
+<header class='sticky flex justify-center items-center mx-auto w-full  z-10 top-0 py-5 border-b border-b-gray-800 bg-gray-950'  id='home' >
   <nav class="flex flex-row items-center bg-neutral-200 dark:bg-black/50 px-5 py-1 rounded-full border border-black">
-    
-
       {
         navItems.map((link) => (
           <a class="hover:bg-white/10 rounded-full text-black dark:text-white px-2 sm:px-3 transition text-sm sm:text-base" href={link.url}>{link.title}</a>

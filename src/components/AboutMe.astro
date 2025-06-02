@@ -1,16 +1,22 @@
 ---
-import brayan from '../assets/aboutme.webp'
+import brayan from '../assets/brayan-aboutme.png'
 
 ---
 
-<div class="" id="sobre-mi">
-    <section class="relative py-12 sm:py-16 lg:pb-40">
+<div class="py-9 lg:py-20" id="sobre-mi">
+    <section class="relative">
         <div class="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 gap-y-4 lg:items-center lg:grid-cols-2 xl:grid-cols-2">
-                <div class="text-center xl:col-span-1 lg:text-left md:px-16 lg:px-0 xl:pr-20">
+
+                <div class="xl:col-span-1 hidden lg:block relative">
+                        <img loading="lazy" class="  h-[300px] sm:h-[500px] lg:h-[550px] w-full object-cover object-center rounded-[35px]" src="https://res.cloudinary.com/djvitvb1v/image/upload/v1706656820/iuaggwukworg5elkmi50.webp" alt="me">
+                        <div class="overlay "></div>  
+                </div>
+
+                <div class="text-center xl:col-span-1 lg:text-left md:px-16 lg:px-0  lg:pl-20">
                     <h2 class="text-4xl font-bold leading-tight text-black dark:text-white/80 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">
                         Sobre mí
-                </span>
+                
                     </h2>
                     <p class="mt-2 text-lg  dark:text-white sm:mt-6 text-pretty">
                         Soy un desarrollador web, con mas de 3 años de experiencia; altamente motivado y con la
@@ -21,10 +27,8 @@ import brayan from '../assets/aboutme.webp'
                     </p>
                 </div>
 
-                <div class="xl:col-span-1 hidden lg:block relative">
-                        <img loading="lazy" class="h-[300px] sm:h-[500px] lg:h-[550px] w-full object-cover object-center rounded-[35px]" src="https://res.cloudinary.com/djvitvb1v/image/upload/v1706656820/iuaggwukworg5elkmi50.webp" alt="me">
-                        <div class="overlay "></div>  
-                    </div>
+
+
             </div>
         </div>
     </section>
