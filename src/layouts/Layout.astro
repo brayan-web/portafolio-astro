@@ -11,6 +11,7 @@ interface Props {
 const { title } = Astro.props;
 import "../styles/index.css";
 import "aos/dist/aos.css";
+import brayan from "../assets/brayan-emerald.png"
 ---
 
 <!doctype html>
@@ -23,6 +24,8 @@ import "aos/dist/aos.css";
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preload" as="image" href={brayan.src}>
+		<link rel="preload" as="image" href="https://res.cloudinary.com/djvitvb1v/image/upload/v1706656820/iuaggwukworg5elkmi50.webp">
 		<title>{title}</title>
 	</head>
 	<body class="relative  bg-gray-950 h-full w-full text-black dark:text-white"> 
