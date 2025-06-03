@@ -11,23 +11,23 @@ const { data } = Astro.props;
 
 
 
-  <div data-aos="fade-up" class="card  hover:scale-105 transition-transform duration-300  transition-all relative mx-auto flex w-full max-w-md  flex-col rounded-xl  bg-white/80 dark:bg-black/50  text-gray-700 shadow-2xl">
+  <div data-aos="fade-up" class="card  hover:scale-105 transition-transform duration-300  transition-all relative mx-auto flex w-full max-w-md  flex-col rounded-xl  bg-slate-900  shadow-2xl">
     <div
       class="relative  mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
       <img
-      class="h-[250px] object-cover object-center"
+      class="h-[250px] object-cover object-center transition duration-300 ease-in-out hover:scale-110"
         src={data.img}
         alt={data.title} />
-        <div class="overlay "></div>  
+     
     </div>
     <div class="p-6">
       <div class="flex items-center justify-between mb-3">
-        <h3 class="block uppercase font-sans text-xl antialiased font-medium leading-snug tracking-normal text-black dark:text-gray-200">
+        <h3 class="block uppercase font-sans text-xl antialiased font-medium leading-snug tracking-normal text-white">
           {data.title}
         </h3>
        
       </div>
-      <p class="block font-sans text-lg antialiased dark:text-white/80 leading-relaxed">
+      <p class="block font-sans text-lg antialiased text-slate-300 leading-relaxed">
         {data.description}
       </p>
       <div class="flex justify-center flex-wrap items-center gap-3 mt-8 group">
